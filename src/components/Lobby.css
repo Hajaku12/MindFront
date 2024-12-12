@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+
+/* Lobby Container */
+.lobby-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: url('/img/lobby2.png'); /* Ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin: 0; /* Elimina márgenes para que el contenedor ocupe toda la pantalla */
+    text-align: center;
+    position: relative; /* Para manejar el contenido en relación con el contenedor */
+}
+/*
+.lobby-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+*/
+
+/* Title */
+.lobby-title {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(255, 200, 0);
+    margin-bottom: 6px;
+
+}
+
+/* Cuando el juego empieza, cambia el fondo */
+.lobby-container.game-started {
+    background-color: #f0f0f0; /* Cambia a un color más suave si lo deseas */
+    background-image: url('/img/juego4.jpg'); /* Nueva imagen para cuando el juego haya comenzado */
+    margin: 0; /* Elimina márgenes para que el contenedor ocupe toda la pantalla */
+    text-align: center;
+    position: center; /* Para manejar el contenido en relación con el contenedor */
+    width: 100%;
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+}
+
+/* Subtitle */
+.lobby-subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 9px;
+    font-weight: 900;
+}
+
+/* User list and items */
+.user-list {
+    font-size: 1.2rem;
+    list-style-type: none;
+    padding: 0;
+    color: #111;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+/* Estilo para cada item de usuario */
+.user-item {
+    background-color: #fff;
+    color: #7334C1; /* Color del texto */
+    margin: 8px auto; /* Centra el item horizontalmente */
+    padding: 1px 16px; /* Reducción adicional del padding vertical */
+    border-radius: 15px; /* Bordes redondeados */
+    width: 50%; /* Mantiene el mismo ancho */
+    transition: all 0.3s ease;
+    border: 3px solid #4B0082; /* Borde violeta */
+}
+
+
+/* No users text */
+.no-users {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1rem;
+    color: #FFFF;
+    font-weight: 700; /* Hace la tipografía más gruesa */
+}
+
+/* Start game button */
+.start-game-button {
+    background-color: #FFBF00;  /* Color de fondo amarillo */
+    color: white;
+    border: 2px solid #ED4D00;  /* Borde de color rojo oscuro */
+    padding: 8px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 60%;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.start-game-button:hover {
+    background-color: #ED4D00;  /* Cambia el color de fondo a rojo oscuro */
+    border-color: #FFBF00;  /* Cambia el borde a color amarillo */
+}
+
+/* Game info */
+
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%; /* Ajusta el ancho para que ocupe un porcentaje razonable */
+    max-width: 500px; /* Asegura que el contenedor no sea mayor a 500px */
+    height: auto; /* Deja que la altura se ajuste automáticamente al contenido */
+    padding: 10px; /* Ajusta el padding para evitar desbordes */
+    /*background-color: rgba(255, 255, 255, 0.55);*/
+    /*border: 3px solid #000;*/
+    border-radius: 0px;
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);*/
+    margin: 70px auto 15px; /* Centra el contenedor y agrega un margen superior */
+    font-size: 1.2rem;
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+    left: 300px; /* Ajuste de la posición horizontal */
+    top: 165px;
+    position: absolute; /* Permite posicionarlo correctamente dentro de su contenedor */
+}
+
+.game-info {
+    margin-top: 1px;
+}
+
+.current-player {
+    font-family: 'Merriweather', serif;
+    margin-top: -170px;
+    font-size: 1.5rem;
+    color: #ff4081;
+    flex-grow: 1;
+}
+
+.waiting-text {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Topic selected */
+.topic-selected {
+    font-family: 'Merriweather', serif !important;
+    font-size: 16px !important;
+    color: #000 !important;
+    margin-top: 20px !important;
+}
+
+.game-container .topic-selected {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; /* Tamaño más pequeño para que sea más legible */
+    color: #fff;  /* Color morado en lugar de blanco */
+    margin-top: 20px;
+}
+
+/* Question section */
+/* Contenedor padre de .question-container con position: relative */
+.parent-container {
+    position: relative;
+    z-index: 1; /* Asegúrate de que otros elementos estén debajo de este contenedor */
+}
+
+/* .question-container con absolute */
+.question-container {
+    margin-top: -350px;
+    text-align: left;
+    gap: 9px;
+    width: 1900%;
+    padding:185px;
+    max-width: 800px;
+    padding: 20px;
+    position: relative;
+    top: 399px;
+    left: -170px;
+    z-index: 2;  /* Asegura que el contenedor esté por encima de otros elementos */
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: #2382D2;
+    margin-bottom: 10px;
+    text-align: left;  /* Alineación a la izquierda */
+}
+
+.question-text {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: left;  /* Alineación a la izquierda */
+    font-weight: bold;
+}
+
+/* Contenedor de los botones */
+.option-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Crea 4 columnas de igual tamaño */
+    gap: 8px;  /* Espacio entre las columnas */
+    width: 100%;
+}
+
+/* Botones */
+.option-button {
+    padding: 6px;
+    gap: 8px;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    text-align: center;
+    font-size: 14px; /* Tamaño de fuente ajustado a 12px */
+}
+
+.option-button:hover {
+    transform: scale(1.05);
+    background-color: #9c27b0;
+}
+
+/*Comenzar Juego*/
+/* Nueva clase para cuando el juego ha comenzado */
+.lobby-started {
+    justify-content: flex-start; /* Alinea el contenido hacia la izquierda */
+    align-items: flex-end; /* Alinea el contenido hacia la parte inferior */
+}
+
+/* Para los elementos dentro del lobby cuando el juego ha comenzado */
+/* Contenedor cuando el juego ha comenzado */
+
+
+ /* Estilo para el título del lobby */
+ .lobby-started .lobby-title {
+     font-family: 'Press Start 2P', sans-serif;
+     font-size: 0.7rem;
+     color: rgb(255, 200, 0);
+     margin-bottom: 10px; /* Espaciado entre el título y los siguientes elementos */
+     text-align: left;
+ }
+
+ /* Estilo para el subtítulo del lobby */
+ .lobby-started .lobby-subtitle {
+     font-size: 0,4rem;
+     color: #000;
+     font-weight: 900;
+     margin-bottom: 10px; /* Espaciado entre el subtítulo y los siguientes elementos */
+     text-align: left;
+ }
+
+ /* Estilo para la lista de usuarios */
+ .lobby-started .user-list {
+     font-size: 1rem;
+     list-style-type: none;
+     padding: 0;
+     margin-bottom: 10px; /* Espaciado entre la lista de usuarios y los siguientes elementos */
+     text-align: left;
+ }
+
+.lobby-started h3 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1rem; /* Ajusta el tamaño según sea necesario */
+    color: rgb(255, 200, 0); /* Asegúrate de que coincida con el estilo que deseas */
+    text-align: center; /* Ajusta si es necesario */
+}
+
+
+
+.lobby-started .no-users {
+     font-family: 'Merriweather', sans-serif;
+     font-size: 1rem;
+     color: #000;
+     text-align: center;
+}
+
+.lobby-started .scoreboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    width: 18%;
+    height: 280px;
+    max-width: 20%;
+    max-height: 280px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;  /* El contenedor es absolutamente posicionado dentro de su contenedor principal */
+    left: 960px; /* Ajuste de la posición horizontal */
+    top: 74px; /* Ajusta la posición vertical dentro del contenedor principal */
+    z-index: 1;  /* Esto asegura que .scoreboard-container quede debajo de .contlobby */
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 1.2rem;
+    color: rgb(255, 200, 0);
+    margin-bottom: 10px; /* Espaciado entre el título y los siguientes elementos */
+    text-align: left;
+    overflow: hidden;  /* Oculta cualquier contenido que se salga del contenedor */
+    word-wrap: break-word;  /* Rompe las palabras largas si es necesario */
+    white-space: normal;  /* Permite que el texto se ajuste a múltiples líneas */
+}
+.lobby-started .scoreboard-container .no-scores {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+    margin-top: 2px;
+
+}
+
+/* Estilo para el texto "No hay puntajes disponibles" */
+.lobby-started .scoreboard-container .no-scores {
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente */
+    color: #000; /* Color del texto */
+    margin-bottom: 9px;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 900;
+
+}
+
+.lobby-started .scoreboard-container .score-item {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center; /* Alineación centrada para los puntajes */
+}
+
+.lobby-started .scoreboard-container .score-item {
+    font-family: 'Merriweather', serif;
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    color: #000; /* Color del texto */
+    margin-bottom: 9px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+    font-weight: 900;
+
+}
+
+.lobby-started .contlobby {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    max-width: 300px;
+    max-height: 233px;
+    background-color: rgba(255, 255, 255, 0.55);
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: absolute;  /* También está posicionado absolutamente dentro del contenedor principal */
+    left: 960px; /* Ajuste de la posición horizontal */
+    top: 410px; /* Mueve este contenedor a 350px de la parte superior del contenedor principal */
+    z-index: 1; /* Esto asegura que .contlobby esté por encima de .scoreboard-container */
+    overflow: hidden;
+    word-wrap: break-word;  /* Rompe las palabras largas si es necesario */
+    white-space: normal;  /* Permite que el texto se ajuste a múltiples líneas */
+
+}
+
+
+
+

@@ -1,0 +1,75 @@
+.lobby-started .scoreboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 500px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: -10px;
+    top: -280px;
+    z-index: 0;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+}
+
+/* Estilo para el título del scoreboard */
+.lobby-started .scoreboard-container h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Estilo para los puntajes */
+.lobby-started .scoreboard-container .score-list {
+    width: 100%;
+    list-style-type: none; /* Quitar los puntos o viñetas */
+    list-style-type: none; /* Quitar los puntos o viñetas */
+    padding: 0;
+    margin: 0;
+}
+
+.lobby-started .scoreboard-container .score-item {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    color: #000;
+    padding: 1px;
+    border-bottom: 1px solid #ddd;
+    text-align: center; /* Alineación centrada para los puntajes */
+}
+
+/* Estilo para cuando no haya puntajes disponibles */
+.lobby-started .scoreboard-container .no-scores {
+    font-size: 18px;
+    color: #ff;
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic; /* Cursiva para hacer el texto menos fuerte */
+}
+
+/* Mejorar el botón de inicio de juego si es visible en el scoreboard */
+.lobby-started .scoreboard-container .start-game-button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #4CAF50; /* Verde claro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espaciado adicional para separar el botón */
+}
+
+.lobby-started .scoreboard-container .start-game-button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
