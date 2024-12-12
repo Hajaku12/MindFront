@@ -6,7 +6,7 @@ let client;
 export function connect(onConnectCallback) {
     console.log("entry connect func");
     client = new Client({
-        webSocketFactory: () => new SockJS('http://localhost:8080/ws'),
+        webSocketFactory: () => new SockJS('http://MindBalancer-1357167474.us-east-1.elb.amazonaws.com/ws'),
         onConnect: () => {
             console.log('Connected');
             onConnectCallback();
